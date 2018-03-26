@@ -25,8 +25,11 @@ class View {
     }
 
     public function render($view) {
+        include('header.html');
         $view = 'views/' . $view . '.phtml';
-        require($view);
+        include($view);
+        include('footer.html');
+        
     }
 
 }
